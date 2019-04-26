@@ -1,0 +1,110 @@
+@import "normalize";
+
+* {
+	box-sizing: border-box;
+}
+
+$primary-color:#ea355a;
+
+html {
+	font-size: 10px;
+	height: 100%;
+}
+
+body {
+	font-family: 'Arial', sent-serif;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	color: #333;
+	min-height: 100%;
+	position: relative;
+	// background: pink;
+	background: linear-gradient(61deg, #ff512f, #dd2476);
+	// background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+
+}
+
+a{
+	text-decoration: none;
+}
+
+.form {
+	font-size: 0;
+	padding: 30px;
+	border-radius: 3px;
+	max-height: 470px;
+	height: 80%;
+	max-width: 460px;
+	width: 60%;
+	background: #fff;
+	// margin: 0 auto;
+	// outline: 1px solid pink;
+	background-radius: 4px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	&__img {
+		margin-right: 10px;
+	}
+	&__title {
+		padding: 0;
+		margin: 0;
+		font-size: 24px;
+		margin-bottom: 5px;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+	}
+	&__disc {
+		margin: 0;
+		font-size: 13px;
+		margin-bottom: 35px;
+		height: 40px;
+		// width: 400px;
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		&--pink {
+			color: $primary-color;
+		}
+	}
+	&__button {
+		font-size: 18px;
+		color: #ffffff;
+		width: 100%;
+		border:0;
+		padding: 15px;
+		border-bottom: 3px solid $primary-color;
+		border-radius: 5px;
+		background-color: $primary-color;
+		margin-bottom: 22px;
+		cursor: pointer;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+		&:hover,
+		&:focus,
+		&:active {
+			// opacity: .5;
+			border-bottom: 3px solid #bd1962;
+			// color: $primary-color;
+			// background-color: #fff;
+		}
+	}
+	&__input {
+		border:0;
+		border-radius:3px;
+		background-color: #f0f0f0;
+		padding: 12px 15px;
+		line-height: 14px;
+		width:48%;
+		font-size: 14px;
+		color:#7a7b7f;
+		margin-bottom: 16px;
+		&:nth-child(2){
+			margin-left: 4%;
+		}
+		&--xs {
+			width: 100%;
+		}
+	}
+}
